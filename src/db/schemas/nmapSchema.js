@@ -2,9 +2,8 @@ import { Schema } from "mongoose"
 
 const nmapSchema = new Schema(
   {
-    options: {
+    optionsScan: {
       type: String,
-      required: true,
     },
     target: {
       type: String,
@@ -12,6 +11,15 @@ const nmapSchema = new Schema(
     },
     result: {
       type: String,
+    },
+    maxRetries: {
+      type: Number,
+    },
+    scanDelay: {
+      type: Number,
+    },
+    maxRate: {
+      type: Number,
     },
   },
   {
